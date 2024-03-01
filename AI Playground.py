@@ -13,8 +13,12 @@ def hash_password(password):
     return hashed_password
 
 def main():
-    # Get password securely
+    # Get password securely without echoing it
     password = getpass.getpass("Enter your password: ")
+
+    # Print asterisks for each character entered
+    hashed_input = '*' * len(password)
+    print("Hashed Input:", hashed_input)
 
     # Hash the password
     hashed_password = hash_password(password)
@@ -24,3 +28,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
